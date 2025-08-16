@@ -32,7 +32,7 @@ def render_overview(stats: dict, hop_hist_df: pd.DataFrame, deep_df: pd.DataFram
 
     st.subheader("Hop Depth Distribution")
     if not hop_hist_df.empty:
-        fig = px.bar(hop_hist_df, x="Max Depth", y="# Cells", height=360)
+        fig = px.bar(hop_hist_df, x="Max Depth", y="# Cells", height=360, color_discrete_sequence=["#72b4ed"])
         fig.update_layout(margin=dict(l=10,r=10,t=30,b=10))
         fig.update_traces(hovertemplate="Depth %{x}<br>Cells %{y}<extra></extra>")
         st.plotly_chart(fig, use_container_width=True)
