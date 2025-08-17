@@ -45,6 +45,8 @@ with st.sidebar:
     st.subheader('How it works')
     st.caption('This app parses formulae, expands ranges, and builds dependency graphs across sheets. '
                'Hop depth indicates the longest chain from a formula to its precedents.')
+    # Add copyright footer
+    st.markdown("<p style='text-align: center; color: grey;'>© 2025 Chandrima D</p>", unsafe_allow_html=True)
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs(
     ["Overview", "Cell Inspector", "Cross-Sheet Matrix", "Circular & Risky", "KPI Tracer"]
